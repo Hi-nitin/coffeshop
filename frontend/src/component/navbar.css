@@ -1,0 +1,37 @@
+/* Center the nav horizontally at the top */
+.nav-container {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    width: 100%;              /* Ensure it takes up the full width */
+        /* Fix it to the top of the page */
+    top: 0;                   /* Align it to the top */
+    left: 0;                  /* Ensure it starts from the left side */
+  
+    z-index: 1000;            /* Make sure the nav stays on top of other content */
+  }
+
+  .nav-list {
+    display: flex;           /* Display list items horizontally */
+    gap: 50px;               /* Space between the links */
+    list-style: none;        /* Remove default list styles */
+    padding: 10px 0;         /* Optional: Add some padding for aesthetics */
+    margin: 0; 
+    margin-top: 20px;              /* Remove default margin */
+  }
+  
+  /* Style the links */
+  .nav-list li {
+    font-size: 18px;         /* Set font size */
+  }
+  .rightcolor{
+    color: white;
+  }
+  .nav-list li a {
+    text-decoration: none;   /* Remove underline from links */
+    color: #333;             /* Set link color */
+  }
+  
+  .nav-list li a:hover {
+    color: #007bff;          /* Change color on hover */
+  }
+  
