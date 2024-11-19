@@ -3,6 +3,7 @@ const router = express.Router();
 const itemUpload=require('../business/itemUpload')
 const multer=require('multer');
 const path = require('path');
+const ouritem=require('../business/ouritem')
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -14,7 +15,8 @@ const storage = multer.diskStorage({
   });
   const upload = multer({ storage });
 
-router.post('/users', upload.single('itemPic'), itemUpload)
+router.post('/users', upload.single('itemPic'), itemUpload);
+router.get('/ouritem',ouritem);
 
 
 

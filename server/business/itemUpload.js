@@ -3,7 +3,7 @@ const ItemSchema = require('../schema/itemuploadschema');
 const itemUpload = async (req, res) => {
     try {
         const { itemName, itemPrice } = req.body;
-        const itemPic = req.file ? req.file.path : null;
+        const itemPic = req.file ? req.file.filename : null;
 
         if (!itemName || !itemPrice || !itemPic) {
             return res.status(400).json({ message: 'All fields are required' });
