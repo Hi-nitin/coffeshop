@@ -1,0 +1,48 @@
+.item-upload-form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .item-upload-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .item-upload-form div {
+    margin-bottom: 10px;
+  }
+  
+  .item-upload-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .item-upload-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .item-upload-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .item-upload-form button:hover {
+    background-color: #45a049;
+  }
+  
+  .item-upload-form img {
+    margin-top: 10px;
+  }
+  
