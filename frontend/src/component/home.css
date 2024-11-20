@@ -180,8 +180,9 @@ color: rgb(109, 106, 106);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 4rem;
+  padding: 3rem;
   height: auto;
+  border-radius: 25px;
 }
 
 .menu-item{

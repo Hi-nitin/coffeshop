@@ -173,7 +173,7 @@ const home = () => {
                     <img className="item-img" src={`http://localhost:3000/uploads/${val.itemPic}`} />
                     <div className='nameprice'>
                       <p>{val.itemName}</p>
-                      <p id='price'>{val.itemPrice}</p>
+                      <p id='price'>Rs {val.itemPrice}</p>
                     </div>
                   </div>
                 </>
