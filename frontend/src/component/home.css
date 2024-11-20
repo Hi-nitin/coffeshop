@@ -132,7 +132,7 @@
 .imgsection {
   display: flex;
   justify-content: center;
-flex-wrap: wrap;
+  flex-wrap: wrap;
   padding: 10px;
 }
 
@@ -141,7 +141,7 @@ flex-wrap: wrap;
 
   width: 19vw;
   height: 16rem;
- 
+
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
 }
@@ -153,29 +153,32 @@ flex-wrap: wrap;
 }
 
 .placename {
-  
+
   display: flex;
-  justify-content: center;  /* Horizontal centering */
-  align-items: center;  
+  justify-content: center;
+  /* Horizontal centering */
+  align-items: center;
   height: 3.5rem;
 }
 
-.menusection{
-margin-top:50px;
+.menusection {
+  margin-top: 50px;
 
 }
-.menu-details{
+
+.menu-details {
   text-align: center;
- 
-}
-.menu-details p{
-font-size: 1.3rem;
-color: rgb(109, 106, 106);
+
 }
 
-.menu-items-container{
+.menu-details p {
+  font-size: 1.3rem;
+  color: rgb(109, 106, 106);
+}
 
-  background-color:#f1dfd1  ;
+.menu-items-container {
+
+  background-color: #f1dfd1;
   margin: 7vw;
   display: flex;
   flex-wrap: wrap;
@@ -185,31 +188,114 @@ color: rgb(109, 106, 106);
   border-radius: 25px;
 }
 
-.menu-item{
-margin-bottom: 4%;
-width: 33%;
-display: flex;
+.menu-item {
+  margin-bottom: 4%;
+  width: 33%;
+  display: flex;
 
 
 }
-.item-img{
-  width:8rem;
+
+.item-img {
+  width: 8rem;
   height: 8rem;
   border-radius: 15px;
 
 }
-.nameprice{
- display: flex;
 
-flex-direction: column;
-justify-content: center;
+.nameprice {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
 }
-.nameprice p{
+
+.nameprice p {
   font-weight: bold;
-  font-size:larger;
-margin-left: 15px;
+  font-size: larger;
+  margin-left: 15px;
 }
-#price{
+
+#price {
   font-weight: lighter;
   color: rgb(109, 106, 106);
 }
+
+.feedback {
+
+  background: rgba(0, 0, 0, 0.5)url('https://static01.nyt.com/images/2023/09/21/multimedia/00uk-coffee-01-qzwv/00uk-coffee-01-qzwv-superJumbo.jpg?quality=75&auto=webp');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  background-blend-mode: darken;
+  display: flex;
+
+}
+
+.forimg {
+
+
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+
+}
+
+.forimg .imgg {
+  width: 27vw;
+  border: 3px solid white;
+  border-radius: 20px;
+  height: 60vh;
+  position: absolute;
+  margin-bottom: 5rem;
+}
+
+.forquote {
+
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.forquote p {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+
+}
+
+.forimg .frame{
+  border: 9px solid white;
+  border-radius: 15px;
+width: 28vw;
+height:60vh ;
+margin-left: 6vw;
+margin-top: 13vh;
+
+}
+
+.rating p{
+  color: white;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+
+.rating {
+  display: flex;
+}
+
+/* Star styles */
+.star {
+  font-size: 40px;
+  color: yellow;  /* Default color (unselected star) */
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
