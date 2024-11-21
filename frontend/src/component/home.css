@@ -294,8 +294,66 @@ margin-top: 13vh;
 /* Star styles */
 .star {
   font-size: 40px;
-  color: yellow;  /* Default color (unselected star) */
+  color: yellow; 
   cursor: pointer;
   transition: color 0.3s;
 }
 
+.section6{
+
+  display: flex;
+ 
+  height: auto;
+}
+
+.section6 .col1{
+  width: 25vw;
+
+  display: flex;
+  padding: 5rem;
+  justify-content: center;
+}
+
+.section6 .col1 ul{
+  list-style-type: none;
+
+}
+.section6 .col1 ul li{
+padding: 0.5rem;
+font-size: larger;
+}
+.section6 .col2 ul li{
+  padding: 0.5rem;
+  font-size: larger;
+  }
+  
+
+
+
+.section6 .col2 ul{
+  list-style-type: none;
+}
+
+
+
+.section6 .col2{
+  width: 25vw;
+  display: flex;
+  padding: 5rem;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.section6 .col3{
+  width: 50vw;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.section6 .col3 iframe{
+  border-radius: 20px;
+ border: 1px solid grey;
+ 
+  box-shadow:0px 4px 12px rgba(0, 0, 0, 0.2)
+}
