@@ -5,6 +5,7 @@ const cors = require('cors');
 const DB_CONN=require('./database/connection');
 app.use(cors());
 const path=require('path')
+app.use(express.json())
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 

@@ -13,6 +13,10 @@ const ItemSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    itemDescription: {
+        type: String,
+        required: true
+    }
 });
 
 const Item = mongoose.model('Item', ItemSchema);

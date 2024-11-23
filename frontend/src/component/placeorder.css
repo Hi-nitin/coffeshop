@@ -1,0 +1,47 @@
+.itemdetail{
+    display: flex;
+ justify-content: center;
+ margin: 10%;  
+
+}
+
+.itemdetail .img{
+width: 50vw;
+border: 1px solid black;
+
+text-align: center;
+
+}
+
+.itemdetail .img img{
+width: 80%;
+margin-top: 5vh;
+}
+
+.itemdetail .detail {
+text-align: center;
+width: 50vw;
+
+}
+
+.itemdetail .detail #row1{
+background-color: yellow;
+height: 50vh;
+}
+
+.itemdetail .detail #row2{
+    background-color: rgb(73, 73, 53);
+    }
+    
+
+.itemdetail .detail h1{
+    margin: 2%;
+}
+.itemdetail .detail p{
+    margin: 5%;
+}
+
+.itemdetail .detail div button{
+    background-color: red;
+    
+}

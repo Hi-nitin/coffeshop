@@ -4,6 +4,7 @@ import './add_item.css';
 const ItemUploadForm = () => {
     const [itemName, setItemName] = useState('');
     const [itemPrice, setItemPrice] = useState('');
+    const [itemDesc, setItemDesc] = useState('');  // New state for item description
     const [itemPic, setItemPic] = useState(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [message, setMessage] = useState('');
@@ -17,6 +18,7 @@ const ItemUploadForm = () => {
         const formData = new FormData();
         formData.append('itemName', itemName);
         formData.append('itemPrice', itemPrice);
+        formData.append('itemDescription', itemDesc); 
         formData.append('itemPic', itemPic);
 
         try {
@@ -27,20 +29,17 @@ const ItemUploadForm = () => {
 
             const result = await response.json();
             console.log(result);
-            if (result.message == 'Item uploaded successfully') {
-
+            if (result.message === 'Item uploaded successfully') {
                 setMessage("Item uploaded successfully");
             }
 
-            if (result.message == 'Server error') {
+            if (result.message === 'Server error') {
                 setMessage("Server error");
             }
 
-            if (result.message == 'All fields are required') {
+            if (result.message === 'All fields are required') {
                 setMessage("All fields are required");
             }
-
-
 
         } catch (error) {
             console.error(error);
@@ -49,6 +48,7 @@ const ItemUploadForm = () => {
             setIsSubmitting(false);
             setItemName('');
             setItemPrice('');
+            setItemDesc(''); 
             setItemPic(null);
         }
     };
@@ -68,7 +68,6 @@ const ItemUploadForm = () => {
                         id="itemName"
                         value={itemName}
                         onChange={(e) => setItemName(e.target.value)}
-                     
                     />
                 </div>
 
@@ -79,7 +78,16 @@ const ItemUploadForm = () => {
                         id="itemPrice"
                         value={itemPrice}
                         onChange={(e) => setItemPrice(e.target.value)}
-                       
+                    />
+                </div>
+
+                <div>
+                    <label htmlFor="itemDesc">Item Description:</label> 
+                    <textarea
+                        id="itemDesc"
+                        value={itemDesc}
+                        onChange={(e) => setItemDesc(e.target.value)}
+                        placeholder="Enter a detailed description of the item"
                     />
                 </div>
 
@@ -90,7 +98,6 @@ const ItemUploadForm = () => {
                         id="itemPic"
                         accept="image/*"
                         onChange={handleFileChange}
-                      
                     />
                 </div>
 

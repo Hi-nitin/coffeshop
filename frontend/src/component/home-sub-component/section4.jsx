@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
+
+import { useNavigate } from "react-router-dom";
 const section4 = () => {
 
   const [ouritems, setouritem] = useState(null);
   const [loadingitem, setloadingitem] = useState('')
+
+  const navigate = useNavigate();
   useEffect(() => {
 
     const getItem = async () => {
@@ -22,6 +26,10 @@ const section4 = () => {
     getItem()
   }, []);
 
+  const itemclick = (itemid) => {
+    sessionStorage.setItem('myselecteditem', itemid);
+    navigate('/placeorder')
+  }
   return (
 
     <>
@@ -40,7 +48,7 @@ const section4 = () => {
             ouritems.map((val) => {
               return (
                 <>
-                  <div onClick={()=>{alert(val._id)}} className='menu-item'>
+                  <div onClick={() => { itemclick(val._id) }} className='menu-item'>
                     <img className="item-img" src={`http://localhost:3000/uploads/${val.itemPic}`} />
                     <div className='nameprice'>
                       <p>{val.itemName}</p>
