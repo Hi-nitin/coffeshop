@@ -5,6 +5,8 @@ import Add_item from './admin/add_item'
 import Aboutus from './component/aboutus';
 import ShowItem from './admin/show_item';
 import Placeorder from './component/placeorder';
+import Login from './component/login';
+import Signup from './component/signup'
 
 function App() {
 
@@ -15,6 +17,8 @@ function App() {
       <Route path="/" element={<Home />}/>
       <Route path="/aboutus" element={<Aboutus />}/>
       <Route path="/placeorder" element={<Placeorder />}/>
+      <Route path="/login" element={<Login />}/>
+      <Route path="/signup" element={<Signup />}/>
 
 
       <Route path="/admin/add-item" element={<Add_item />}/>

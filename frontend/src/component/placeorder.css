@@ -6,7 +6,7 @@
 }
 
 .itemdetail .img{
-width: 50vw;
+width: 40vw;
 border: 1px solid black;
 
 text-align: center;
@@ -25,12 +25,13 @@ width: 50vw;
 }
 
 .itemdetail .detail #row1{
-background-color: yellow;
-height: 50vh;
+
+height: 60vh;
 }
 
 .itemdetail .detail #row2{
-    background-color: rgb(73, 73, 53);
+   
+    height: 10vh;
     }
     
 
@@ -42,6 +43,18 @@ height: 50vh;
 }
 
 .itemdetail .detail div button{
-    background-color: red;
-    
+    background-color:rgb(170, 197, 170);
+    width: 7rem;
+    height: 3rem;
+    float: right;
+    margin-left: 5%;
+}
+
+.itemdetail .detail div input{
+    width: 6rem;
+    height: 3.2rem;
+    border-radius: 5px;
+    font-size: 2rem;
+
+
 }
