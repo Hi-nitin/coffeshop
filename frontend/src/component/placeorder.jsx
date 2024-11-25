@@ -37,7 +37,7 @@ const placeorder = () => {
     const placingorder = async () => {
 
         if (quantity) {
-            Cookies.set('token', 'gadafamilyp', { expires: 1 / 24 });
+
             const myorder = sessionStorage.getItem('myselecteditem');
             try {
                 const response = await axios.post('http://localhost:3000/placeorder', {
@@ -49,8 +49,10 @@ const placeorder = () => {
 
                     },
                     withCredentials: true
-
                 })
+
+                console.log(response.data);
+
             } catch (ex) {
                 alert(ex)
             }

@@ -22,7 +22,7 @@ function login() {
     const handlelogin = async (p) => {
         p.preventDefault();
 
-        const response = await axios.post('http://localhost:7777/login',
+        const response = await axios.post('http://localhost:3000/login',
             logindetail, {
             headers: {
                 'Content-Type': 'application/json'
@@ -30,22 +30,23 @@ function login() {
 
         });
 
-        if (response.msg === 'login') {
-            Cookies.set('token', response.token, { expires: 1 / 24 });
+        if (response.data.msg === 'login') {
+     
+            Cookies.set('token', response.data.token, { expires: 1 / 24 });
 
-            navigate('/dashboard');
+            navigate('/');
         }
 
-        console.log(response);
-        if (response.msg == 'User not found') {
+
+        if (response.data.msg == 'User not found') {
             setusernameE(response.msg)
         }
-        if (response.msg == 'incorrect password') {
+        if (response.data.msg == 'incorrect password') {
             setpassreqerror(response.msg)
         }
 
-        if (response.errors) {
-            response.errors.map((val) => {
+        if (response.data.errors) {
+            response.data.errors.map((val) => {
 
                 if (val.msg == 'Username is required') {
                     setusernameE(val.msg)

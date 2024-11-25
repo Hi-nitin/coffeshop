@@ -17,7 +17,6 @@ function FormExample() {
   });
   const handleinput = (events) => {
 
-    //const {name,value}=events.target;
     setfd({
       ...formData,
       [events.target.name]: events.target.value
@@ -29,21 +28,26 @@ function FormExample() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    try {
+      const Apirequest = await axios.post('http://localhost:3000/signup', formData);
+      const Apiresponse = await Apirequest.data;
+      console.log(Apiresponse.errors);
+      Apiresponse.success == true ? alert('successfully signed') :
+        signupMap(Apiresponse.errors)
 
-    const Apirequest = await axios('http://localhost:7777/signup', formData);
-    const Apiresponse = await Apirequest;
-    console.log(Apiresponse);
+      Apiresponse.msg == 'duplicate user' ? alert('user is duplicate') : null
+
+    } catch (ex) {
+      console.log(ex);
+
+    }
 
 
-    Apiresponse.success == true ? alert('successfully signed') :
-      signupMap(Apiresponse.errors)
-
-    Apiresponse.msg == 'duplicate user' ? alert('user is duplicate') : null
   }
   return (
     <>
-    <Navbar/>
-        <Form onSubmit={handleSubmit}>
+      <Navbar />
+      <Form onSubmit={handleSubmit}>
 
         <Form.Group as={Col} md="4" controlId="validationCustom01">
           <Form.Label>First name</Form.Label>

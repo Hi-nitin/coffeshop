@@ -1,18 +1,15 @@
+/* General Styles */
 .main {
   background-image: url('W:\coffee\frontend\src\assets\Screenshot 2024-11-07 221749-Photoroom.png');
   background-size: cover;
   background-position: center;
   height: 100vh;
   width: 100%;
-
 }
 
 .crop {
-
   margin-top: 30vh;
   margin-left: 10vw;
-
-
 }
 
 .coffee-heading {
@@ -58,7 +55,6 @@
 .services-left p {
   font-size: 1.3em;
   color: rgb(109, 106, 106);
-
 }
 
 .services-right {
@@ -72,10 +68,8 @@
 
 .service {
   width: 45%;
-
   margin: 20px 0;
   text-align: center;
-
 }
 
 .service img {
@@ -137,10 +131,8 @@
 
 .imgsection .details {
   margin: 25px;
-
   width: 19vw;
   height: 16rem;
-
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
 }
@@ -152,22 +144,18 @@
 }
 
 .placename {
-
   display: flex;
   justify-content: center;
-  /* Horizontal centering */
   align-items: center;
   height: 3.5rem;
 }
 
 .menusection {
   margin-top: 50px;
-
 }
 
 .menu-details {
   text-align: center;
-
 }
 
 .menu-details p {
@@ -176,7 +164,6 @@
 }
 
 .menu-items-container {
-
   background-color: #f1dfd1;
   margin: 7vw;
   display: flex;
@@ -191,20 +178,16 @@
   margin-bottom: 4%;
   width: 33%;
   display: flex;
-
-
 }
 
 .item-img {
   width: 8rem;
   height: 8rem;
   border-radius: 15px;
-
 }
 
 .nameprice {
   display: flex;
-
   flex-direction: column;
   justify-content: center;
 }
@@ -221,27 +204,21 @@
 }
 
 .feedback {
-
-  background: rgba(0, 0, 0, 0.5)url('https://static01.nyt.com/images/2023/09/21/multimedia/00uk-coffee-01-qzwv/00uk-coffee-01-qzwv-superJumbo.jpg?quality=75&auto=webp');
+  background: rgba(0, 0, 0, 0.5) url('https://static01.nyt.com/images/2023/09/21/multimedia/00uk-coffee-01-qzwv/00uk-coffee-01-qzwv-superJumbo.jpg?quality=75&auto=webp');
   background-size: cover;
   background-position: center;
   height: 100vh;
   width: 100%;
   background-blend-mode: darken;
   display: flex;
-
 }
 
 .forimg {
-
-
   width: 50vw;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-
 }
 
 .forimg .imgg {
@@ -254,7 +231,6 @@
 }
 
 .forquote {
-
   width: 50vw;
   display: flex;
   justify-content: center;
@@ -266,7 +242,6 @@
   text-align: center;
   color: white;
   font-size: 2rem;
-
 }
 
 .forimg .frame {
@@ -276,7 +251,6 @@
   height: 60vh;
   margin-left: 6vw;
   margin-top: 13vh;
-
 }
 
 .rating p {
@@ -285,12 +259,10 @@
   font-size: 20px;
 }
 
-
 .rating {
   display: flex;
 }
 
-/* Star styles */
 .star {
   font-size: 40px;
   color: yellow;
@@ -299,15 +271,12 @@
 }
 
 .section6 {
-
   display: flex;
-
   height: auto;
 }
 
 .section6 .col1 {
   width: 25vw;
-
   display: flex;
   padding: 5rem;
   justify-content: center;
@@ -315,7 +284,6 @@
 
 .section6 .col1 ul {
   list-style-type: none;
-
 }
 
 .section6 .col1 ul li {
@@ -328,14 +296,9 @@
   font-size: larger;
 }
 
-
-
-
 .section6 .col2 ul {
   list-style-type: none;
 }
-
-
 
 .section6 .col2 {
   width: 25vw;
@@ -356,8 +319,7 @@
 .section6 .col3 iframe {
   border-radius: 20px;
   border: 1px solid grey;
-
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2)
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 footer {
@@ -376,10 +338,7 @@ footer .col1 {
 footer .col2 {
   width: 33.33vw;
   display: flex;
-
   justify-content: center;
-
-
 }
 
 footer .col3 {
@@ -389,15 +348,12 @@ footer .col3 {
   text-align: right;
   align-items: center;
   font-size: larger;
-
 }
-
 
 .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .wrapper .button {
@@ -476,4 +432,91 @@ footer .col3 {
 
 .wrapper .button:nth-child(4) span {
   color: #ff0000;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .services-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .services-left, .services-right {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .top-row, .bottom-row {
+    flex-direction: column;
+  }
+
+  .service {
+    width: 100%;
+  }
+
+  .menu-item {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .menu-items-container {
+    margin: 2vw;
+    padding: 2rem;
+  }
+
+  .imgsection .details {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .section6 {
+    flex-direction: column;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  .wrapper {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    background-position: top;
+  }
+
+  .coffee-heading {
+    font-size: 2rem;
+  }
+
+  .coffee-paragraph {
+    font-size: 1.2rem;
+  }
+
+  .services-section {
+    padding: 15px;
+  }
+
+  .contactusbtn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .imgsection .details {
+    width: 100%;
+    height: auto;
+  }
+
+  .section6 .col1, .section6 .col2 {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  footer .col1, footer .col2, footer .col3 {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
 }
