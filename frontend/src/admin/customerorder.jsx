@@ -1,6 +1,13 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import './customerorder.css'
 import axios from "axios";
+
+
 const customerorder = () => {
+
+    const [order, setorder] = useState();
+
+ 
 
     useEffect(() => {
 
@@ -9,17 +16,59 @@ const customerorder = () => {
 
                 const response = await axios.get('http://localhost:3000/customerorder');
                 const result = response.data;
-                console.log(result);
+
+                setorder(result.message)
+              
 
             } catch (ex) {
-                console.log(ex);
+
+                alert(ex)
 
             }
         }
         get_order_detail()
-    }, [])
+    }, []);
+
+
+   
+
     return (
         <>
+            <table>
+                <tr>
+                    <th>Item Ordered</th>
+                    <th>Item photo</th>
+                    <th>Quantity</th>
+                    <th>Customer Name</th>
+                    <th>Customer Number</th>
+                    <th>Customer Address</th>
+                    <th>Action</th>
+
+                </tr>
+
+                {
+                    order ? order.map((val) => {
+                        return (
+                            <>
+                                <tr>
+                                    <td>{val.item_id.itemName}</td>
+                                    <td>{val.item_id.itemPic}</td>
+                                    <td>{val.quantity}</td>
+                                    <td>{val.orderedby.name}</td>
+                                    <td>{ }</td>
+                                    <td>{ }</td>
+                                    <td><button id="comp">Completed</button></td>
+                                </tr>
+                            </>
+                        )
+                    })
+
+
+                        : <p>loading...</p>
+                }
+            </table>
+
+
 
         </>
 

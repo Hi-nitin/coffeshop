@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import './placeorder.css';
-import Cookies from 'js-cookie';
+import io from 'socket.io-client';
+const socket = io('http://localhost:3000');
 
 const placeorder = () => {
     const [itemdetail, setitemdetail] = useState();
@@ -34,6 +35,19 @@ const placeorder = () => {
 
     }, [])
 
+
+
+    useEffect(() => {
+        socket.on('fog', () => {
+            console.log('tggggg');
+            
+        });
+
+        return () => {
+            socket.off('fog');
+        };
+    }, []);
+
     const placingorder = async () => {
 
         if (quantity) {
@@ -51,9 +65,10 @@ const placeorder = () => {
                     withCredentials: true
                 })
 
-            
+
 
                 if (response.data.message == 'order placed') {
+                    socket.emit('me');
                     alert(response.data.message)
                 }
 

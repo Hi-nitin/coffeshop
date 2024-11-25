@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import './show_item.css';
+import io from 'socket.io-client';
+const socket = io('http://localhost:3000');
 const ShowItem = () => {
 
     const [ourItem, setOurItem] = useState([]);
@@ -18,6 +20,18 @@ const ShowItem = () => {
         }
 
         getItem();
+    }, []);
+
+
+    useEffect(() => {
+        socket.on('fog', () => {
+            console.log('Response received');
+        });
+        
+        return () => {
+            socket.off('fog');
+            console.log('Socket cleaned up');
+        };
     }, []);
 
     return (
