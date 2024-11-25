@@ -434,7 +434,7 @@ footer .col3 {
   color: #ff0000;
 }
 
-/* Responsive Styles */
+/* Responsive Styles for Mobile and Desktop */
 @media screen and (max-width: 1200px) {
   .services-section {
     flex-direction: column;
@@ -466,7 +466,7 @@ footer .col3 {
 
   .imgsection .details {
     width: 100%;
-    margin: 10px 0;
+    height: auto;
   }
 
   .section6 {

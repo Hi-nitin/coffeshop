@@ -12,6 +12,7 @@ const signup_M=require('../middleware/signup')
 const login_B=require('../business/login')
 const login_V=require('../validator/login')
 const login_M=require('../middleware/login')
+const orderdetail=require('../business/customerorder')
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -29,6 +30,7 @@ router.post('/myselecteditem',selecteditem);
 router.post('/placeorder',placeorder)
 router.post('/signup',signup_V,signup_M,signup_B)
 router.post('/login',login_V,login_M,login_B)
+router.get('/customerorder',orderdetail)
 
 
 module.exports = router;

@@ -7,25 +7,27 @@ import ShowItem from './admin/show_item';
 import Placeorder from './component/placeorder';
 import Login from './component/login';
 import Signup from './component/signup'
+import Customerorder from './admin/customerorder';
 
 function App() {
 
 
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home />}/>
-      <Route path="/aboutus" element={<Aboutus />}/>
-      <Route path="/placeorder" element={<Placeorder />}/>
-      <Route path="/login" element={<Login />}/>
-      <Route path="/signup" element={<Signup />}/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/aboutus" element={<Aboutus />} />
+        <Route path="/placeorder" element={<Placeorder />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
 
 
-      <Route path="/admin/add-item" element={<Add_item />}/>
-      <Route path="/admin/show-item" element={<ShowItem />}/>
-    
-    </Routes>
-  </BrowserRouter>
+        <Route path="/admin/add-item" element={<Add_item />} />
+        <Route path="/admin/show-item" element={<ShowItem />} />
+        <Route path="/admin/customer-order" element={<Customerorder />} />
+
+      </Routes>
+    </BrowserRouter>
   )
 }
 

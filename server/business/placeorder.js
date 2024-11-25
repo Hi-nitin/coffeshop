@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken')
-const orderdetailschema=require('../schema/orderdetailschema')
-const placeorder =async (req, res) => {
+const orderdetailschema = require('../schema/orderdetailschema')
+const placeorder = async (req, res) => {
     const { ordereditem, quantity } = req.body;
     try {
 
@@ -12,23 +12,23 @@ const placeorder =async (req, res) => {
                 const decoded = jwt.verify(token, 'key');
                 console.log(decoded);
                 console.log(ordereditem, quantity);
-                try{
-                    const saveorder=new orderdetailschema({
+                try {
+                    const saveorder = new orderdetailschema({
                         item_id: ordereditem,
-                        quantity: quantity,  
+                        quantity: quantity,
                         orderedby: decoded.userId
                     });
 
-                  const savedata=await saveorder.save();
-                  res.json({message:'order placed'})
+                    const savedata = await saveorder.save();
+                    res.json({ message: 'order placed' })
 
-                }catch(ex){
-console.log(ex);
+                } catch (ex) {
+                    console.log(ex);
 
                 }
 
             } catch (ex) {
-                res.json({ message: 'token verification failed.' })
+                res.json({ message: 'token verification failed' })
             }
 
         } else {

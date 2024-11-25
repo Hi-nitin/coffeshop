@@ -8,7 +8,7 @@ const Navbar = () => {
       <ul className="nav-list">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/aboutus">About</Link></li>
-        <li><Link to="/">Services</Link></li>
+        <li><Link to="/login">Services</Link></li>
         <li style={{ marginTop: '-20px' ,paddingLeft:'1%',paddingRight:'1%'}}> <Link to="/"><img src="/coffeehome.png" alt="Deep Earth" /></Link></li>
         <li ><Link to="/"><span className='rightcolor'>Trainings</span></Link></li>
         <li ><Link to="/"><span className='rightcolor'>Contact</span></Link></li>

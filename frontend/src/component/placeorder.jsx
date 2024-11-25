@@ -51,7 +51,19 @@ const placeorder = () => {
                     withCredentials: true
                 })
 
-                console.log(response.data);
+            
+
+                if (response.data.message == 'order placed') {
+                    alert(response.data.message)
+                }
+
+                if (response.data.message == 'token verification failed') {
+                    alert(response.data.message)
+                }
+
+                if (response.data.message == 'invalid token') {
+                    alert(response.data.message)
+                }
 
             } catch (ex) {
                 alert(ex)
