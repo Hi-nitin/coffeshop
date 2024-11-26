@@ -29,6 +29,7 @@ function login() {
             }
 
         });
+console.log(response.data);
 
         if (response.data.msg === 'login') {
      

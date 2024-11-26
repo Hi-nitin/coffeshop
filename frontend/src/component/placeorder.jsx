@@ -8,45 +8,29 @@ const placeorder = () => {
     const [itemdetail, setitemdetail] = useState();
     const [quantity, setquantity] = useState();
 
-    useEffect(() => {
-
+    const showmyitem = async () => {
         const myorder = sessionStorage.getItem('myselecteditem');
 
-        const showmyitem = async () => {
-            try {
-                const response = await axios.post('http://localhost:3000/myselecteditem', { item: myorder }, {
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
+        try {
+            const response = await axios.post('http://localhost:3000/myselecteditem', { item: myorder }, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
 
-                });
+            });
 
-                setitemdetail(response.data.message)
-
-
-            } catch (ex) {
-                console.log(ex);
-
-            }
-
+            setitemdetail(response.data.message)
+        } catch (ex) {
+            console.log(ex);
 
         }
+    }
+    useEffect(() => {
         showmyitem()
 
     }, [])
 
 
-
-    useEffect(() => {
-        socket.on('fog', () => {
-            console.log('tggggg');
-            
-        });
-
-        return () => {
-            socket.off('fog');
-        };
-    }, []);
 
     const placingorder = async () => {
 

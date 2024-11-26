@@ -4,8 +4,12 @@ const customerorder = async (req, res) => {
     try {
 
         const getorder = await orderschema.find().populate('item_id orderedby');
-        
-res.json({message:getorder})
+        if (getorder.length != 0) {
+            res.json({ message: getorder })
+        }else{
+            res.json({ message: 'empty' })
+        }
+
 
     } catch (ex) {
         console.log(ex);

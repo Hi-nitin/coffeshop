@@ -14,10 +14,9 @@ const socket = (server) => {
   io.on('connection', (socket) => {
     console.log('A user connected');
 
-    // Listen for a 'message' event from the client
-
+ 
     socket.on('me', () => {
-      io.emit('fog')
+      io.emit('neworderplaced')
     })
     // Handle client disconnect
     socket.on('disconnect', () => {
