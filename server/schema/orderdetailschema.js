@@ -15,6 +15,10 @@ const itemorderschema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'UserRegister',
         required: true,
+    },
+    status: {
+        type: String,
+        default: 'pending', 
     }
 
 });

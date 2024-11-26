@@ -3,6 +3,7 @@ import axios from "axios";
 import './placeorder.css';
 import io from 'socket.io-client';
 const socket = io('http://localhost:3000');
+import Navbar from "./nav_placeorder";
 
 const placeorder = () => {
     const [itemdetail, setitemdetail] = useState();
@@ -74,7 +75,7 @@ const placeorder = () => {
     }
     return (
         <>
-
+<Navbar/>
             {
                 itemdetail ? <div>
 

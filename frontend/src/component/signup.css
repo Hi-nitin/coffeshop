@@ -1,0 +1,149 @@
+/* General Container */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+  }
+  
+  .form-container {
+    margin: 0;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    border: 1px solid #f0f0f0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Form Title */
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Fields */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  .form-control {
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #d1d1d1;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* Invalid Input */
+  .form-control.is-invalid {
+    border-color: #e74c3c;
+    background-color: #fff5f5;
+  }
+  
+  .form-control.is-invalid:focus {
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
+  }
+  
+  /* Button */
+  button[type="submit"] {
+    width: 100%;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  button[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+  }
+  
+  /* Input Group */
+  .input-group-text {
+    background-color: #f9f9f9;
+    border-right: 1px solid #d1d1d1;
+    border-radius: 6px 0 0 6px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .col-md-4 {
+      width: 50%;
+    }
+  
+    .col-md-6 {
+      width: 50%;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .col-md-4 {
+      width: 100%;
+    }
+  
+    .col-md-6 {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .form-container {
+      padding: 20px;
+    }
+  
+    .form-group {
+      margin-bottom: 15px;
+    }
+  
+    .form-label {
+      font-size: 14px;
+    }
+  
+    .form-control {
+      padding: 14px;
+      font-size: 14px;
+    }
+  
+    button[type="submit"] {
+      padding: 14px;
+      font-size: 1rem;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+    }
+  }
+  

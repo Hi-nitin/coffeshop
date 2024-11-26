@@ -1,4 +1,9 @@
-/* General Styles */
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 .main {
   background-image: url('W:\coffee\frontend\src\assets\Screenshot 2024-11-07 221749-Photoroom.png');
   background-size: cover;
@@ -518,5 +523,49 @@ footer .col3 {
     width: 100%;
     padding: 1rem;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main {
+    background-position: top;
+  }
+
+  .coffee-heading {
+    font-size: 1.6rem;
+  }
+
+  .coffee-paragraph {
+    font-size: 1rem;
+  }
+
+  .services-section {
+    padding: 10px;
+  }
+
+  .menu-items-container {
+    padding: 1.5rem;
+    margin: 2vw;
+  }
+
+  .menu-item {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .imgsection .details {
+    margin: 10px;
+    width: 100%;
+    height: auto;
+  }
+
+  .section6 .col1, .section6 .col2, .section6 .col3 {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  footer .col1, footer .col2, footer .col3 {
+    width: 100%;
+    padding: 0.5rem;
   }
 }
