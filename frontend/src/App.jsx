@@ -8,6 +8,7 @@ import Placeorder from './component/placeorder';
 import Login from './component/login';
 import Signup from './component/signup'
 import Customerorder from './admin/customerorder';
+import Myorder from './component/myorder'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/placeorder" element={<Placeorder />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/myorder" element={<Myorder />} />
 
 
         <Route path="/admin/add-item" element={<Add_item />} />
