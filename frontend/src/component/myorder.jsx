@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './myorder.css'
+import Navbar from '../component/navbar2';
 const Orders = ({ userId }) => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -33,7 +34,12 @@ const Orders = ({ userId }) => {
   }
 
   return (
+    <>
+     <Navbar/>
+ 
+    
     <div>
+      
       <h2>Your Orders</h2>
       <table>
         <thead>
@@ -54,6 +60,7 @@ const Orders = ({ userId }) => {
         </tbody>
       </table>
     </div>
+    </>
   );
 };
 

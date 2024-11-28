@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import './customerorder.css';
 import axios from "axios";
 import io from 'socket.io-client';
-
+import Nav from './navbar'
 const socket = io('http://localhost:3000');
 
 const CustomerOrder = () => {
@@ -42,11 +42,10 @@ const CustomerOrder = () => {
     };
   }, []);
 
-  const orderComplete = async (itemId, customerId) => {
+  const orderComplete = async (orderId) => {
     try {
       const response = await axios.put('http://localhost:3000/completeorder', {
-        itemId,
-        customerId
+        orderId,
       });
 
       if (response.data.message === 'Order status updated to completed') {
@@ -63,6 +62,7 @@ const CustomerOrder = () => {
 
   return (
     <>
+    <Nav/>
       <table>
         <thead>
           <tr>
@@ -89,7 +89,7 @@ const CustomerOrder = () => {
               <td>{val.status}</td> 
               <td>
                 {val.status === 'pending' && (
-                  <button onClick={() => orderComplete(val.item_id._id, val.orderedby._id)} id="comp">
+                  <button onClick={() => orderComplete(val._id)} id="comp">
                     Order Completed
                   </button>
                 )}

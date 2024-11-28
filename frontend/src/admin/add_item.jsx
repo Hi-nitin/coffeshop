@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './add_item.css';
-
+import Nav from './navbar'
 const ItemUploadForm = () => {
     const [itemName, setItemName] = useState('');
     const [itemPrice, setItemPrice] = useState('');
@@ -58,6 +58,8 @@ const ItemUploadForm = () => {
     };
 
     return (
+        <>
+        <Nav/>
         <div className="item-upload-form">
             <h2>Upload Item</h2>
             <form onSubmit={handleSubmit}>
@@ -119,6 +121,8 @@ const ItemUploadForm = () => {
 
             {message && <p>{message}</p>}
         </div>
+        </>
+      
     );
 };
 

@@ -1,0 +1,44 @@
+
+  
+  /* The container for the full screen background */
+  .admin-home {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+  }
+  
+  /* Full-screen background image */
+  .background {
+    position: absolute;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-image: url('https://static.vecteezy.com/system/resources/previews/011/332/525/non_2x/hand-drawn-coffee-concept-background-free-vector.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-position: center center; /* Center the image */
+    background-attachment: fixed; /* Makes the background fixed while scrolling */
+    z-index: -1; /* Puts the background behind the content */
+    filter: blur(1px); /* Optional: Adds a blur effect to the background */
+  }
+  
+  /* Centered text */
+  .welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Full height of the screen */
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  }
+  
+  h1 {
+    font-size: 4em;
+    margin: 0;
+  }
+  
+  p {
+    font-size: 1.5em;
+    margin-top: 10px;
+  }
+  
