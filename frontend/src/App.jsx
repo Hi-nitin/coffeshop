@@ -10,6 +10,7 @@ import Signup from './component/signup'
 import Customerorder from './admin/customerorder';
 import Myorder from './component/myorder'
 import AdminHome from './admin/home';
+import AdminLogin from './admin/login';
 
 function App() {
 
@@ -24,6 +25,8 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/myorder" element={<Myorder />} />
 
+
+        <Route path="/admin" element={<AdminLogin />} />
         <Route path="/admin/home" element={<AdminHome />} />
         <Route path="/admin/add-item" element={<Add_item />} />
         <Route path="/admin/show-item" element={<ShowItem />} />

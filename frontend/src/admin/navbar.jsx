@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';  // Import useNavigate
 import './Navbar.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();  // Initialize useNavigate
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   const handleLogout = () => {
-    alert("Logged out!");  // Replace with actual logout logic if needed
+    // Replace this with your actual logout logic
+    alert("Logged out!");
+    
+    // Redirect to the '/admin' page after logout
+    navigate('/admin');
   };
 
   return (
