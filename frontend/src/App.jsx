@@ -10,6 +10,7 @@ import Signup from './component/signup'
 import Customerorder from './admin/customerorder';
 import Myorder from './component/myorder'
 import AdminHome from './admin/home';
+import Service from './component/service';
 import AdminLogin from './admin/login';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/myorder" element={<Myorder />} />
+        <Route path="/service" element={<Service />} />
 
 
         <Route path="/admin" element={<AdminLogin />} />

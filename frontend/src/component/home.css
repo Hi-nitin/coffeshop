@@ -294,6 +294,7 @@ height: 20%;
 .section6 {
   display: flex;
   height: auto;
+  background-color:white;
 }
 
 .section6 .col1 {
