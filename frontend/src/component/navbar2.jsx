@@ -10,7 +10,7 @@ const Navbar = () => {
         <li><Link to="/aboutus">About</Link></li>
         <li><Link to="/service">Services</Link></li>
         <li style={{ marginTop: '-20px' ,paddingLeft:'1%',paddingRight:'1%'}}> <Link to="/"><img src="/coffeehome.png" alt="Deep Earth" /></Link></li>
-        <li ><Link to="/"><span>Trainings</span></Link></li>
+        <li ><Link to="/training"><span>Trainings</span></Link></li>
         <li ><Link to="/"><span>Contact</span></Link></li>
       </ul>
     </nav>

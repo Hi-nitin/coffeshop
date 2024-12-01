@@ -12,7 +12,8 @@ import Myorder from './component/myorder'
 import AdminHome from './admin/home';
 import Service from './component/service';
 import AdminLogin from './admin/login';
-
+import Training from './component/training';
+import ContactUs from './component/contactus';
 function App() {
 
 
@@ -26,6 +27,8 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/myorder" element={<Myorder />} />
         <Route path="/service" element={<Service />} />
+        <Route path="/training" element={<Training />} />
+        <Route path="/contact" element={<ContactUs />} />
 
 
         <Route path="/admin" element={<AdminLogin />} />

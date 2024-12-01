@@ -18,6 +18,8 @@ const tokenverify=require('../middleware/tokenverify')
 const myorder=require('../business/myorder');
 const deleteitem=require('../business/deleteitem')
 const modifyitem=require('../business/modifyitem')
+const contactus=require('../business/contactus')
+const contactus_v=require('../validator/contactus')
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -40,6 +42,7 @@ router.put('/completeorder',ordercompleted)
 router.get('/myorder',tokenverify,myorder)
 router.delete('/ouritem/:id',deleteitem)
 router.put('/ouritem/:id',modifyitem)
+router.post('/contact',contactus_v,contactus)
 
 
 module.exports = router;

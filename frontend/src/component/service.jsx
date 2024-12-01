@@ -4,12 +4,12 @@ import './service.css';
 import Navbar from "./navbar2";
 import Footer from './home-sub-component/footer';
 import Section6 from './home-sub-component/section6';
-const aboutus = () => {
+const service = () => {
     return (
         <>
             <Navbar />
 
-            <div className="section-1">
+            <div className="section-11">
 
                 <h1>Our Coffee</h1>
             </div>
@@ -71,4 +71,4 @@ const aboutus = () => {
     )
 }
 
-export default aboutus;
+export default service;

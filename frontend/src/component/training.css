@@ -1,6 +1,6 @@
-.section1 {
+.section-1 {
 
-    background: rgba(0, 0, 0, 0.5)url('https://png.pngtree.com/thumb_back/fh260/background/20230712/pngtree-d-illustration-of-architectural-design-for-coffee-shop-bar-with-banner-image_3853372.jpg');
+    background: rgba(0, 0, 0, 0.5)url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThC4ZERRi73zavy2T76WpV4ztNzN08VC_L0Q&s');
     background-size: cover;
     background-position: center;
     height: 70vh;
@@ -18,37 +18,35 @@
 
 }
 
-.section2 {
-    margin: 5%;
-    font-family: 'Courier New', Courier, monospace;
+.section-2 {
+    margin: 6%;
 }
 
-.section2 p{
+.section-2 p{
     font-size: large;
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
 
-.section3{
+.section-3{
     display: flex;
-width: 90vw;
-
+width: 100%;
+height: 90vh;
 text-align: center;
 margin-left: auto;
+font-family: 'Courier New', Courier, monospace;
 margin-right: auto;
 background-color: rgb(245, 234, 234);
 
 }
 
-.section3 .forimg{
-    width: 40vw;
-}
-
-.section3 .forimg img{
-    width:100%;
+.section-3 .forimg img{
+  width: 50vw;
+  height: 100vh;
 
 }
 
-.section3 .fordescription{
+.section-3 .fordescription{
 width: 50vw;
 display: flex;
 flex-direction: column;
@@ -56,16 +54,23 @@ justify-content: center;
 align-items: center;
 }
 
-.section3 .fordescription h1{
+
+.section-3 .fordescription #first{
+    margin: 3rem;
+}
+.section-3 .fordescription h1{
     font-size: 2.5rem;
     margin: 20px;
 }
-.section3 .fordescription p{
+.section-3 .fordescription p{
     font-size: 1.5rem;
     font-style: oblique;
    
 }
 
+.section-3 li{
+margin:0.5rem;
+}
 .section4{
     padding: 8%;
     margin-bottom: -10%;
