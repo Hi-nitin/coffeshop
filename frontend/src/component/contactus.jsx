@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ContactUs.css'; // Ensure the CSS file is imported
+import './contactus.css'; // Ensure the CSS file is imported
 import Navbar from './navbar2';
 const ContactUs = () => {
   // State to hold the form data
@@ -116,7 +116,7 @@ const ContactUs = () => {
           {errors.message && <span className="error">{errors.message}</span>}
         </div>
 
-        <button type="submit">Submit</button>
+        <button className='mybutton' type="submit">Submit</button>
       </form>
 
       {submitStatus && <p>{submitStatus}</p>}

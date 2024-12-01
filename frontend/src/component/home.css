@@ -353,7 +353,7 @@ footer .col1 {
   width: 33.33vw;
   display: flex;
   align-items: center;
-  font-size: larger;
+  font-size: small;
   justify-content: center;
 }
 
@@ -369,7 +369,7 @@ footer .col3 {
   justify-content: center;
   text-align: right;
   align-items: center;
-  font-size: larger;
+  font-size:small ;
 }
 
 .wrapper {
