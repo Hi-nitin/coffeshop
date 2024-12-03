@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import Navbar from './navbar';
 function addplace() {
   const [formData, setFormData] = useState({
     name: '',
@@ -61,7 +61,21 @@ function addplace() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+   <>
+   <div style={{
+  position: 'fixed',
+  top: 0,
+  left: '50%',
+  transform: 'translateX(-50%)',
+  width: '100%', 
+  
+}}>
+  <Navbar />
+</div>
+
+ 
+
+   <form onSubmit={handleSubmit}>
       <div>
         <label>Name of Place</label>
         <input
@@ -127,6 +141,7 @@ function addplace() {
 
       <button type="submit">Save Place</button>
     </form>
+   </>
   );
 }
 

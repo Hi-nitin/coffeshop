@@ -1,0 +1,108 @@
+/* PlaceDetails.css */
+
+/* General Styling */
+.place-details {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  
+  .place-details .image-container {
+    flex: 1 1 40%; /* 40% width, flexible on smaller screens */
+    max-width: 400px;
+    margin-right: 20px;
+  }
+  
+  .place-details img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .place-details .details-container {
+    flex: 1 1 50%; /* 50% width, flexible on smaller screens */
+    max-width: 600px;
+  }
+  
+  .place-details h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .place-details p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .place-details p strong {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .place-details .loading,
+  .place-details .error {
+    font-size: 1.2rem;
+    color: #ff6b6b;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  /* Styling the location and contact information */
+  .place-details .contact-info {
+    background-color: #e9f7fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 30px;
+  }
+  
+  .place-details .contact-info p {
+    margin: 8px 0;
+  }
+  
+  .place-details .contact-info strong {
+    color: #007b8f;
+  }
+  
+  .place-details .place-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .place-details .place-info h2 {
+    font-size: 1.8rem;
+    color: #007b8f;
+    margin-bottom: 15px;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .place-details {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .place-details .image-container,
+    .place-details .details-container {
+      max-width: 100%;
+      margin-right: 0;
+    }
+  
+    .place-details h1 {
+      font-size: 2rem;
+    }
+  }
+  

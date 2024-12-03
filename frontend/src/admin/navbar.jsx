@@ -22,13 +22,14 @@ const Navbar = () => {
     <header>
       <nav className="navbar">
         <div className="logo">
-          <a href="#">MyLogo</a>
+       
         </div>
         <div className={`menu ${isMenuOpen ? 'active' : ''}`}>
           <ul>
             <li><a href="/admin/home">Home</a></li>
             <li><a href="/admin/add-item">Add-item</a></li>
             <li><a href="/admin/customer-order">Customer-order</a></li>
+            <li><a href="/admin/add-place">Add place</a></li>
             <li><a href="/admin/show-item">Show-item</a></li>
           </ul>
         </div>
