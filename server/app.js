@@ -14,6 +14,7 @@ const http = require('http');
 const path = require('path')
 app.use(express.json())
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/placeuploads', express.static(path.join(__dirname, 'placeuploads')));
 app.use(cookieParser());
 const server = http.createServer(app);
 

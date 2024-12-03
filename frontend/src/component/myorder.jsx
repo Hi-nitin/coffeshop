@@ -17,7 +17,7 @@ const Orders = ({ userId }) => {
         setOrders(response.data); 
         setLoading(false);
       } catch (err) {
-        setError('Failed to fetch orders');
+        setError('Login to see your order.');
         setLoading(false);
       }
     };
@@ -35,7 +35,11 @@ const Orders = ({ userId }) => {
 
   return (
     <>
-     <Navbar/>
+ <div style={{ position: 'fixed', top: 0, left: '50%', transform: 'translateX(-50%)', width: '100%' }}>
+    <Navbar />
+</div>
+
+    
  
     
     <div>

@@ -7,7 +7,7 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import signupMap from '../maping/signup';
 import axios from 'axios';
-import Navbar from './navbar';
+import Navbar from './navbar2';
 
 function signup() {
   const [formData, setfd] = useState({

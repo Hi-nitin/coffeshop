@@ -1,60 +1,100 @@
-.itemdetail{
+.itemdetail {
     display: flex;
- justify-content: center;
- margin: 10%;  
-
+    justify-content: center;
+    margin: 5% auto; /* Reduced margin for better spacing */
+    padding: 2rem;
+    max-width: 1200px; /* Limit max-width for larger screens */
+    background-color: #f7f7f7;
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.itemdetail .img{
-width: 40vw;
-border: 1px solid black;
-
-text-align: center;
-
+.itemdetail .img {
+    width: 45vw; /* Slightly increased width */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Add a background to the image container */
 }
 
-.itemdetail .img img{
-width: 80%;
-margin-top: 5vh;
+.itemdetail .img img {
+    width: 80%;
+    margin-top: 2rem; /* Reduced top margin */
+    border-radius: 8px; /* Rounded corners for images */
+    transition: transform 0.3s ease;
+}
+
+.itemdetail .img img:hover {
+    transform: scale(1.05); /* Subtle zoom effect on hover */
 }
 
 .itemdetail .detail {
-text-align: center;
-width: 50vw;
-
+    text-align: left; /* Align text to the left for a cleaner look */
+    width: 50vw;
+    margin-left: 2rem; /* Space between image and details */
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.itemdetail .detail #row1{
-
-height: 60vh;
+.itemdetail .detail #row1 {
+    height: auto; /* Allow for flexibility in content */
+    margin-bottom: 1rem;
 }
 
-.itemdetail .detail #row2{
-   
-    height: 10vh;
-    }
-    
-
-.itemdetail .detail h1{
-    margin: 2%;
-}
-.itemdetail .detail p{
-    margin: 5%;
+.itemdetail .detail #row2 {
+    height: auto; /* Allow for more space as needed */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.itemdetail .detail div button{
-    background-color:rgb(170, 197, 170);
-    width: 7rem;
-    height: 3rem;
-    float: right;
-    margin-left: 5%;
+.itemdetail .detail h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+    font-family: 'Helvetica', sans-serif;
 }
 
-.itemdetail .detail div input{
+.itemdetail .detail p {
+    margin-bottom: 1rem;
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.itemdetail .detail div button {
+    background-color: #88c06f; /* Softer green */
+    color: #fff;
+    width: 8rem;
+    height: 3.2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.itemdetail .detail div button:hover {
+    background-color: #6fae55; /* Darker green on hover */
+    transform: translateY(-2px); /* Small lift effect */
+}
+
+.itemdetail .detail div input {
     width: 6rem;
     height: 3.2rem;
     border-radius: 5px;
-    font-size: 2rem;
+    font-size: 1.6rem;
+    padding-left: 1rem;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+}
 
-
+.itemdetail .detail div input:focus {
+    border-color: #88c06f; /* Green border on focus */
+    outline: none;
 }

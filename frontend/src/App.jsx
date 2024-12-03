@@ -14,6 +14,7 @@ import Service from './component/service';
 import AdminLogin from './admin/login';
 import Training from './component/training';
 import ContactUs from './component/contactus';
+import Add_place from './admin/add_place';
 function App() {
 
 
@@ -36,6 +37,7 @@ function App() {
         <Route path="/admin/add-item" element={<Add_item />} />
         <Route path="/admin/show-item" element={<ShowItem />} />
         <Route path="/admin/customer-order" element={<Customerorder />} />
+        <Route path="/admin/add-place" element={<Add_place />} />
 
       </Routes>
     </BrowserRouter>

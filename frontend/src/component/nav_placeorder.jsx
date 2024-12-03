@@ -4,7 +4,9 @@ import './navbar.css';
 const Navbar = () => {
 
   return (
-    <nav className="nav-container">
+    <div className='' style={{position:'fixed',width:'90%',backgroundColor:'white'}}>
+
+<nav className="nav-container">
       <ul className="nav-list">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/login">Login</Link></li>
@@ -12,6 +14,8 @@ const Navbar = () => {
     
            </ul>
     </nav>
+    </div>
+
   )
 }
 
