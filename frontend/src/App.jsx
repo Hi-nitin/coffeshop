@@ -15,6 +15,7 @@ import AdminLogin from './admin/login';
 import Training from './component/training';
 import ContactUs from './component/contactus';
 import Add_place from './admin/add_place';
+import PlaceDetails from './component/placedetail';
 function App() {
 
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/service" element={<Service />} />
         <Route path="/training" element={<Training />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/place/:id" element={<PlaceDetails />} />
 
 
         <Route path="/admin" element={<AdminLogin />} />

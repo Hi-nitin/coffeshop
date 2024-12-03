@@ -23,6 +23,7 @@ const contactus_v = require('../validator/contactus')
 const addplace = require('../business/add-place');
 const multerforaddplace=require('../multer/addplace')
 const fetchplace=require('../business/fetch-place')
+const placedetail=require('../business/placedetail')
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -48,6 +49,7 @@ router.get('/myorder', tokenverify, myorder)
 router.delete('/ouritem/:id', deleteitem)
 router.put('/ouritem/:id', modifyitem)
 router.post('/contact', contactus_v, contactus)
+router.get('/place/:id',placedetail)
 router.get('/fetchplace',fetchplace)
 router.post('/addplaces', multerforaddplace.single('picture'), addplace);
 
