@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import './placedetail.css';  // Import the CSS file
+import './placedetail.css';  
 import Navbar from './navbar2'
 
 const PlaceDetails = () => {
-  const { id } = useParams(); // Get the place ID from the URL
+  const { id } = useParams(); 
   const [place, setPlace] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetch the place details by ID
+
     axios.get(`http://localhost:3000/place/${id}`)
       .then(response => {
         setPlace(response.data);

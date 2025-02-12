@@ -2,7 +2,7 @@ const itemuploadschema = require('../schema/itemuploadschema')
 const ouritem = async (req, res) => {
     try {
 
-        const items = await itemuploadschema.find().limit(6);
+        const items = await itemuploadschema.find();
 
         res.status(200).json({ message: items });
 

@@ -10,9 +10,9 @@ function LoginPage() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Check if username and password are correct
+   
     if (username === 'admin' && password === 'admin') {
-      navigate('/admin/home'); // Redirect to home page
+      navigate('/admin/home'); 
     } else {
       setError('Invalid username or password');
     }

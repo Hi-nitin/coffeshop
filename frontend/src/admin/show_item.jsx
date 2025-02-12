@@ -8,13 +8,13 @@ import Nav from './navbar'
 const ShowItem = () => {
 
     const [ourItem, setOurItem] = useState([]);
-    const [showModal, setShowModal] = useState(false);  // State to toggle the modal
-    const [selectedItem, setSelectedItem] = useState(null);  // To hold the item to be modified
+    const [showModal, setShowModal] = useState(false); 
+    const [selectedItem, setSelectedItem] = useState(null); 
 
     useEffect(() => {
         const getItem = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/ouritem');
+                const response = await axios.get('http://localhost:3000/showallitem');
                 setOurItem(response.data.message);
             } catch (ex) {
                 alert('Error: ' + ex);
@@ -38,7 +38,7 @@ const ShowItem = () => {
     const deleteItem = async (itemId) => {
         try {
             await axios.delete(`http://localhost:3000/ouritem/${itemId}`);
-            setOurItem(ourItem.filter(item => item._id !== itemId));  // Remove item from state
+            setOurItem(ourItem.filter(item => item._id !== itemId)); 
             alert('Item deleted successfully');
         } catch (error) {
             alert('Error deleting item');
@@ -46,7 +46,7 @@ const ShowItem = () => {
     }
 
     const modifyItem = (itemId) => {
-        // Find the selected item from the list and open the modal
+       
         const itemToModify = ourItem.find(item => item._id === itemId);
         setSelectedItem(itemToModify);
         setShowModal(true);
@@ -55,8 +55,8 @@ const ShowItem = () => {
     const handleUpdateItem = async () => {
         try {
             const updatedItem = await axios.put(`http://localhost:3000/ouritem/${selectedItem._id}`, selectedItem);
-            setOurItem(ourItem.map(item => item._id === selectedItem._id ? updatedItem.data.item : item));  // Update item in state
-            setShowModal(false);  // Close the modal
+            setOurItem(ourItem.map(item => item._id === selectedItem._id ? updatedItem.data.item : item)); 
+            setShowModal(false); 
             alert('Item updated successfully');
         } catch (error) {
             alert('Error updating item');
@@ -97,7 +97,7 @@ const ShowItem = () => {
                 </table>
             </div>
 
-            {/* Modify Item Modal */}
+           
             {showModal && selectedItem && (
                 <div className="modal">
                     <div className="modal-content">

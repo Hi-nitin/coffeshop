@@ -24,6 +24,9 @@ const addplace = require('../business/add-place');
 const multerforaddplace=require('../multer/addplace')
 const fetchplace=require('../business/fetch-place')
 const placedetail=require('../business/placedetail')
+const viewallitem=require('../business/viewallitem')
+const searchitem=require('../business/searchitem')
+const showallitem=require('../business/showallitem')
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -39,6 +42,8 @@ const upload = multer({ storage });
 
 router.post('/users', upload.single('itemPic'), itemUpload);
 router.get('/ouritem', ouritem);
+router.get('/showallitem',showallitem);
+router.get('/allitem', viewallitem);
 router.post('/myselecteditem', selecteditem);
 router.post('/placeorder', placeorder)
 router.post('/signup', signup_V, signup_M, signup_B)
@@ -52,6 +57,7 @@ router.post('/contact', contactus_v, contactus)
 router.get('/place/:id',placedetail)
 router.get('/fetchplace',fetchplace)
 router.post('/addplaces', multerforaddplace.single('picture'), addplace);
+router.get('/searchitem',searchitem)
 
 
 module.exports = router;

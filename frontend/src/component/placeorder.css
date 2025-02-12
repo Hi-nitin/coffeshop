@@ -1,38 +1,38 @@
 .itemdetail {
     display: flex;
     justify-content: center;
-    margin: 5% auto; /* Reduced margin for better spacing */
+    margin: 5% auto;
     padding: 2rem;
-    max-width: 1200px; /* Limit max-width for larger screens */
+    max-width: 1200px;
     background-color: #f7f7f7;
-    border-radius: 10px; /* Rounded corners for the container */
+    border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .itemdetail .img {
-    width: 45vw; /* Slightly increased width */
+    width: 45vw;
     border: 1px solid #ddd;
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff; /* Add a background to the image container */
+    background-color: #fff;
 }
 
 .itemdetail .img img {
     width: 80%;
-    margin-top: 2rem; /* Reduced top margin */
-    border-radius: 8px; /* Rounded corners for images */
+    margin-top: 2rem;
+    border-radius: 8px;
     transition: transform 0.3s ease;
 }
 
 .itemdetail .img img:hover {
-    transform: scale(1.05); /* Subtle zoom effect on hover */
+    transform: scale(1.05);
 }
 
 .itemdetail .detail {
-    text-align: left; /* Align text to the left for a cleaner look */
+    text-align: left;
     width: 50vw;
-    margin-left: 2rem; /* Space between image and details */
+    margin-left: 2rem;
     padding: 2rem;
     background-color: #fff;
     border-radius: 8px;
@@ -40,12 +40,12 @@
 }
 
 .itemdetail .detail #row1 {
-    height: auto; /* Allow for flexibility in content */
+    height: auto;
     margin-bottom: 1rem;
 }
 
 .itemdetail .detail #row2 {
-    height: auto; /* Allow for more space as needed */
+    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,7 +67,7 @@
 }
 
 .itemdetail .detail div button {
-    background-color: #88c06f; /* Softer green */
+    background-color: #88c06f;
     color: #fff;
     width: 8rem;
     height: 3.2rem;
@@ -80,8 +80,8 @@
 }
 
 .itemdetail .detail div button:hover {
-    background-color: #6fae55; /* Darker green on hover */
-    transform: translateY(-2px); /* Small lift effect */
+    background-color: #6fae55;
+    transform: translateY(-2px);
 }
 
 .itemdetail .detail div input {
@@ -95,6 +95,6 @@
 }
 
 .itemdetail .detail div input:focus {
-    border-color: #88c06f; /* Green border on focus */
+    border-color: #88c06f;
     outline: none;
 }

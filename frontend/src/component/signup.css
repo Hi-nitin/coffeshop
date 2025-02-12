@@ -1,4 +1,4 @@
-/* General Container */
+
 body {
     margin: 0;
     padding: 0;
@@ -21,7 +21,7 @@ body {
     box-sizing: border-box;
   }
   
-  /* Form Title */
+
   h2 {
     font-size: 2rem;
     font-weight: 600;
@@ -30,7 +30,7 @@ body {
     margin-bottom: 20px;
   }
   
-  /* Form Fields */
+
   .form-group {
     margin-bottom: 20px;
   }
@@ -57,7 +57,7 @@ body {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
   }
   
-  /* Invalid Input */
+
   .form-control.is-invalid {
     border-color: #e74c3c;
     background-color: #fff5f5;
@@ -67,7 +67,7 @@ body {
     box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
   }
   
-  /* Button */
+
   button[type="submit"] {
     width: 100%;
     background-color: #888a8d;
@@ -91,14 +91,14 @@ body {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
   }
   
-  /* Input Group */
+
   .input-group-text {
     background-color: #f9f9f9;
     border-right: 1px solid #d1d1d1;
     border-radius: 6px 0 0 6px;
   }
   
-  /* Responsive Styles */
+
   @media (max-width: 1200px) {
     .col-md-4 {
       width: 50%;

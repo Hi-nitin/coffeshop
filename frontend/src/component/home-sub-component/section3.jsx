@@ -69,13 +69,13 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // <-- Updated import
+import { useNavigate } from 'react-router-dom'; 
 
 const Section3 = () => {
   const [places, setPlaces] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const navigate = useNavigate(); // <-- Replace `useHistory` with `useNavigate`
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     axios.get('http://localhost:3000/fetchplace')
@@ -91,7 +91,7 @@ const Section3 = () => {
   }, []);
 
   const handlePlaceClick = (id) => {
-    // Use `navigate` to redirect to the place details page
+    
     navigate(`/place/${id}`);
   };
 

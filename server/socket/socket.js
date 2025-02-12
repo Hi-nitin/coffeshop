@@ -18,7 +18,7 @@ const socket = (server) => {
     socket.on('me', () => {
       io.emit('neworderplaced')
     })
-    // Handle client disconnect
+
     socket.on('disconnect', () => {
       console.log('A user disconnected');
     });

@@ -1,9 +1,9 @@
-const Place = require('../schema/addplace'); // Import the Place model
+const Place = require('../schema/addplace');
 
 const fetchplace=async(req,res)=>{
     try {
-        const places = await Place.find(); // Fetch all places from the database
-        res.json(places); // Send the places data as JSON
+        const places = await Place.find(); 
+        res.json(places); 
       } catch (err) {
         res.status(500).json({ message: 'Error fetching places', error: err });
       }

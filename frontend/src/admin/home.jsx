@@ -1,7 +1,7 @@
 import Navbar from './navbar';
 
 import React from 'react';
-import './home.css'; // The CSS file we will modify
+import './home.css'; 
 
 const AdminHome = () => {
   return (

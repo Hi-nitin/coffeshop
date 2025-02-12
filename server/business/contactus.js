@@ -9,19 +9,19 @@ const contactus = async (req, res) => {
     try {
         const { name, email, message } = req.body;
 
-        // Validate the data
+     
         if (!name || !email || !message) {
             return res.status(400).json({ error: 'All fields are required' });
         }
 
-        // Create a new contact form entry
+       
         const newForm = new ContactForm({
             name,
             email,
             message,
         });
 
-        // Save to the database
+      
         await newForm.save();
 
         res.status(200).json({ message: 'Form submitted successfully!' });

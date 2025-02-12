@@ -1,27 +1,32 @@
-import Navbar from '../navbar'
-const section1 = () => {
+import Navbar from '../navbar';
 
-    return (
-        <>
-            <div className="main">
-                <Navbar />
-                <div className='crop'>
-                    <h1 className="coffee-heading">From Crop To Cup</h1>
+const Section1 = () => {
+  // Function to handle scrolling to Section4
+  const scrollToMenu = () => {
+    const section4 = document.getElementById("section4");
+    if (section4) {
+      section4.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
-                    <p className='coffee-paragraph'>Himalayan Java coffee Beans are grown locally and are </p>
-                    <p className='coffee-paragraph'>roasted to perfection in the ideal Himalayan air. It is then</p>
-                    <p className='coffee-paragraph'>packaged immediately and rushed off to our outlets which</p>
-                    <p className='coffee-paragraph'>ensures we deliver the best coffee experience possible for </p>
-                    <p className='coffee-paragraph'>all of our customers. </p>
+  return (
+    <>
+      <div className="main">
+        <Navbar />
+        <div className="crop">
+          <h1 className="coffee-heading">From Crop To Cup</h1>
 
-                    <button className='seemenu'>See Menu</button>
-                </div>
+          <p className="coffee-paragraph">Himalayan Java coffee Beans are grown locally and are</p>
+          <p className="coffee-paragraph">roasted to perfection in the ideal Himalayan air. It is then</p>
+          <p className="coffee-paragraph">packaged immediately and rushed off to our outlets which</p>
+          <p className="coffee-paragraph">ensures we deliver the best coffee experience possible for</p>
+          <p className="coffee-paragraph">all of our customers.</p>
 
-            </div>
+          <button className="seemenu" onClick={scrollToMenu}>See Menu</button>
+        </div>
+      </div>
+    </>
+  );
+};
 
-        </>
-
-    )
-}
-
-export default section1;
+export default Section1;

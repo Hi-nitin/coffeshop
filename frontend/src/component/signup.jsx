@@ -8,8 +8,9 @@ import Row from 'react-bootstrap/Row';
 import signupMap from '../maping/signup';
 import axios from 'axios';
 import Navbar from './navbar2';
+import { useNavigate } from 'react-router-dom';
 
-function signup() {
+function Signup() {
   const [formData, setfd] = useState({
     firstname: '',
     lastname: '',
@@ -20,7 +21,9 @@ function signup() {
     address: ''
   });
 
-  const handleinput = (events) => {
+  const navigate = useNavigate();
+
+  const handleInput = (events) => {
     setfd({
       ...formData,
       [events.target.name]: events.target.value
@@ -32,13 +35,18 @@ function signup() {
     try {
       const Apirequest = await axios.post('http://localhost:3000/signup', formData);
       const Apiresponse = await Apirequest.data;
-      Apiresponse.success === true ? alert('Successfully signed up') :
-        signupMap(Apiresponse.errors);
+      Apiresponse.success === true
+        ? alert('Successfully signed up')
+        : signupMap(Apiresponse.errors);
 
       Apiresponse.msg === 'duplicate user' ? alert('User is duplicate') : null;
     } catch (ex) {
       console.log(ex);
     }
+  };
+
+  const handleLoginRedirect = () => {
+    navigate('/login');
   };
 
   return (
@@ -55,9 +63,8 @@ function signup() {
                 type="text"
                 name="firstname"
                 placeholder="First name"
-                onChange={handleinput}
+                onChange={handleInput}
               />
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
 
             <Form.Group as={Col} md="6" controlId="validationCustom02">
@@ -67,9 +74,8 @@ function signup() {
                 name="lastname"
                 type="text"
                 placeholder="Last name"
-                onChange={handleinput}
+                onChange={handleInput}
               />
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
           </Row>
 
@@ -82,7 +88,7 @@ function signup() {
                   type="text"
                   placeholder="Username"
                   name="username"
-                  onChange={handleinput}
+                  onChange={handleInput}
                   aria-describedby="inputGroupPrepend"
                   required
                 />
@@ -101,9 +107,8 @@ function signup() {
                 type="password"
                 name="password"
                 placeholder="Enter password"
-                onChange={handleinput}
+                onChange={handleInput}
               />
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
 
             <Form.Group as={Col} md="6" controlId="validationCustom04">
@@ -113,9 +118,8 @@ function signup() {
                 type="password"
                 name="cpassword"
                 placeholder="Confirm password"
-                onChange={handleinput}
+                onChange={handleInput}
               />
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
           </Row>
 
@@ -127,9 +131,8 @@ function signup() {
                 type="text"
                 name="contact"
                 placeholder="Enter contact number"
-                onChange={handleinput}
+                onChange={handleInput}
               />
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
 
             <Form.Group as={Col} md="6" controlId="validationCustomAddress">
@@ -139,17 +142,22 @@ function signup() {
                 type="text"
                 name="address"
                 placeholder="Enter address"
-                onChange={handleinput}
+                onChange={handleInput}
               />
-              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
           </Row>
 
           <Button type="submit">Submit form</Button>
         </Form>
+
+        <div className="login-btn-container">
+          <Button variant="link" onClick={handleLoginRedirect}>
+            Already have an account? Login here
+          </Button>
+        </div>
       </div>
     </>
   );
 }
 
-export default signup;
+export default Signup;

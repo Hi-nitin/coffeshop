@@ -4,7 +4,7 @@ import Nav from './navbar'
 const ItemUploadForm = () => {
     const [itemName, setItemName] = useState('');
     const [itemPrice, setItemPrice] = useState('');
-    const [itemDesc, setItemDesc] = useState('');  // New state for item description
+    const [itemDesc, setItemDesc] = useState('');  
     const [itemPic, setItemPic] = useState(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [message, setMessage] = useState('');

@@ -94,7 +94,7 @@ const placeorder = () => {
 
                             <div id="row2">
                                 <input type="number" placeholder="    1" onChange={(e) => { setquantity(e.target.value) }} />
-                                <button onClick={() => { placingorder() }}>hy</button>
+                                <button onClick={() => { placingorder() }}>place order</button>
                             </div>
                         </div>
                     </div>
